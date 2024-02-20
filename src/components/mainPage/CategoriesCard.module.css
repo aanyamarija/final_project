@@ -1,0 +1,40 @@
+.categoryCard{
+    border-radius: 8px;
+    padding: 40px;
+}
+  
+  .categoryCard h3 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+  
+  }
+
+  .categoryImage {
+    width: 316px;
+    height: 350px;
+    border-radius: 12px;
+    
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .categoryCard {
+        padding: 20px; /* Уменьшаем внутренние отступы */
+    }
+
+    .categoryImage {
+        height: 250px; /* Уменьшаем высоту изображения */
+    }
+
+    .categoryCard h3 {
+        font-size: 16px; /* Уменьшаем размер шрифта заголовка */
+    }
+}
+
+
+
+  

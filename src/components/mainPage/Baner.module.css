@@ -1,0 +1,133 @@
+.banerContainer {
+    position: relative;
+    width: 100%;
+    /* Занимать всю ширину экрана */
+
+}
+
+.banerImg {
+    width: 100%;
+    /* Занимать всю ширину контейнера */
+    /* Убрать скругления у изображения */
+}
+
+.overlayText {
+    position: absolute;
+    width: 80%;
+
+    top: 40%;
+    /* Устанавливаем отступ сверху от верхней границы родительского элемента */
+    left: 10%;
+    /* Отступ слева */
+    right: 40px;
+    /* Отступ справа */
+    color: white;
+    
+    /* Внутренний отступ текста от краев контейнера */
+    
+    /* Отступ сверху от текста */
+}
+
+.titleTxt {
+    font-family: Montserrat;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 106px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.btnCheck {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 16px 56px;
+    /* Внутренний отступ кнопки (16px сверху и снизу, 56px слева и справа) */
+    border-radius: 6px;
+    gap: 10px;
+    color: white;
+    border: none;
+    background-color: #339933;
+    margin-top: 40px;
+}
+
+
+.banerContainer {
+    position: relative;
+    width: 100%;
+    /* Занимать всю ширину экрана */
+
+  }
+  
+  .banerImg {
+    width: 100%;
+    /* Занимать всю ширину контейнера */
+    /* Убрать скругления у изображения */
+  }
+  
+  .overlayText {
+    position: absolute;
+    width: 80%;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+    color: white;
+    padding: 40px;
+    margin-top: 40px;
+    font-size: 96px;
+    line-height: 106px;
+    text-align: left;
+  }
+  
+  .titleTxt {
+    font-family: Montserrat;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 106px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .btnCheck {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 16px 56px;
+    border-radius: 6px;
+    gap: 10px;
+    color: white;
+    border: none;
+    background-color: #339933;
+    margin-top: 40px;
+  }
+  
+  
+  /* Медиа-запрос для маленьких устройств (телефоны и планшеты) */
+  @media (max-width: 768px) {
+    .overlayText {
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      font-size: 48px;
+      line-height: 56px;
+    }
+  
+    .banerImg {
+      border-radius: 0; /* Убрать скругления у изображения на маленьких устройствах */
+    }
+  }
+  
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,140 @@
+/* DiscountForm.module.css */
+
+.discount-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px;
+  margin: 40px;
+  background: linear-gradient(261.47deg, #0B710B 32.63%, #339933 98.96%);
+  height: 100%;
+
+}
+
+.discount-text {
+  color: white;
+  text-align: center;
+  grid-column: span 2;
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0em;
+  margin-top: 20px;
+
+}
+
+
+
+.discount-form-image {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+}
+
+.discount-img {
+
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.discount-form {
+  display: flex;
+  flex-direction: column;
+  margin: 32px;
+
+}
+
+.discount-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.discount-form input {
+  width: 100%;
+  height: 58px;
+  gap: 10px;
+  padding: 16px 32px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #0B710B;
+  box-sizing: border-box;
+}
+
+
+.discount-form input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  padding-left: 10px;
+}
+
+.discount-form button {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 20px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 58px;
+  margin-top: 32px;
+  margin-right: 32px;
+}
+
+.discount-form button:hover {
+  background-color: lightgreen;
+}
+
+
+/* Для мобильных устройств (ширина экрана менее 600px) */
+@media only screen and (max-width: 600px) {
+  .discount-container {
+    grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+    padding: 10px; /* Уменьшаем внутренний отступ */
+    margin: 20px; /* Уменьшаем внешний отступ */
+  }
+
+  .discount-text {
+    font-size: 36px; /* Уменьшаем размер текста */
+    line-height: 40px; /* Уменьшаем высоту строки */
+    margin-top: 10px; /* Уменьшаем отступ сверху */
+  }
+
+  .discount-form-image {
+    display: none; /* Скрыть изображение на мобильных устройствах */
+  }
+}
+
+/* Для планшетов (ширина экрана менее 900px) */
+@media only screen and (max-width: 900px) {
+  .discount-text {
+    font-size: 48px; /* Уменьшаем размер текста для планшетов */
+    line-height: 52px; /* Уменьшаем высоту строки для планшетов */
+  }
+}
+
+/* Для устройств с высоким разрешением (ретина-дисплеи) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+  /* Дополнительные стили для устройств с высоким разрешением */
+}

@@ -1,0 +1,107 @@
+.categoriesTitleBtn {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+
+}
+
+.btnTitleWrapper h2 {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    margin: 40px;
+
+}
+
+.btnTitleWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleWraper {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 40px;
+}
+
+.lineBtnWrapper {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+.line {
+    height: 1px;
+    border: none;
+    border-top: 1px solid #DDDDDD;
+    width: 1093px;
+
+
+}
+
+.ctgBtn {
+    width: 142px;
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    color: #DDDDDD;
+    background-color: white;
+    gap: 10px;
+    text-decoration: none;
+
+}
+
+.categoriesContainer {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.categoriesWrapper{
+    width: 100%;
+}
+
+
+/* Медиа-запрос для маленьких устройств (телефоны и планшеты) */
+@media (max-width: 768px) {
+    .btnTitleWrapper {
+      flex-direction: column; /* Заголовок и кнопка в столбец */
+      align-items: center; /* Центрирование заголовка и кнопки по горизонтали */
+    }
+  
+    .lineBtnWrapper {
+      flex-direction: column; /* Линия и кнопка в столбец */
+      align-items: center; /* Центрирование линии и кнопки по горизонтали */
+    }
+  
+    .line {
+      width: 90%; /* Ширина линии */
+      max-width: 1093px; /* Максимальная ширина линии */
+      border: 1px solid #DDDDDD; /* Граница линии */
+      margin: 20px auto; /* Отступы от краев */
+    }
+  
+    .categoriesWrapper {
+      width: 90%; /* Ширина обертки категорий */
+      max-width: 1093px; /* Максимальная ширина обертки категорий */
+    }
+  
+    .categoriesContainer {
+      display: flex;
+      flex-direction: column; /* Карточки категорий в столбец */
+      align-items: center; /* Центрирование карточек по горизонтали */
+    }
+  }
+  
+
+

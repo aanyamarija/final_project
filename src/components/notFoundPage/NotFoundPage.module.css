@@ -1,0 +1,51 @@
+.errorWrapper {
+    margin: 80px 375px;
+}
+
+.errorImage {
+    width: 100%;
+}
+
+.pageContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageContentWrapper h2 {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.pageContentWrapper p {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #8B8B8B;
+}
+
+.goHomeBtn {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+
+    border: none;
+    background-color: #339933;
+    width: 209px;
+    height: 58px;
+    padding: 16px 56px;
+    border-radius: 6px;
+    gap: 10px;
+    margin-top: 32px;
+}

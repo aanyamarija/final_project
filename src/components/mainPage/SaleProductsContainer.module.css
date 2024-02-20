@@ -1,0 +1,84 @@
+.SaleProductsWrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.titleBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lineBtnWrapper {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+
+.SalesTitleBtn {
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin: 40px;
+}
+
+.lineSales {
+  height: 1px;
+  border: none;
+  border-top: 1px solid #DDDDDD;
+  width: 1093px;
+}
+
+.SaleBtn {
+  width: 142px;
+  height: 36px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #DDDDDD;
+  color: #DDDDDD;
+  background-color: white;
+  gap: 10px;
+}
+
+.salesWrapper{
+width: 100%;
+}
+
+/* SaleProductsContainer.module.css */
+
+.salesWrapper {
+  width: 100%;
+}
+
+/* Медиа-запрос для маленьких устройств (телефоны и планшеты) */
+@media (max-width: 768px) {
+  .titleBtnWrapper {
+    flex-direction: column; /* Заголовок и кнопка в столбец */
+    align-items: center; /* Центрирование заголовка и кнопки по горизонтали */
+  }
+
+  .lineBtnWrapper {
+    flex-direction: column; /* Линия и кнопка в столбец */
+    align-items: center; /* Центрирование линии и кнопки по горизонтали */
+  }
+
+  .lineSales {
+    width: 90%; /* Ширина линии */
+    max-width: 832px; /* Максимальная ширина линии */
+    border: 1px solid #DDDDDD; /* Граница линии */
+    margin: 20px auto; /* Отступы от краев */
+  }
+
+  .SaleProductsWrapper {
+    display: flex;
+    flex-direction: column; /* Карточки товаров в столбец */
+    align-items: center; /* Центрирование карточек по горизонтали */
+  }
+}
+
+
+  

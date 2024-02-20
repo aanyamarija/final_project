@@ -1,0 +1,108 @@
+/* ProductCard.module.css */
+
+.productCardContainer {
+
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+
+
+
+}
+
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+
+  width: 316px;
+  height: auto;
+
+}
+
+
+.textPriceContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  padding: 32px;
+}
+
+
+.productTitle {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+
+
+
+}
+
+.priceContainer {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+
+}
+
+.productDiscountPrice {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+
+
+}
+
+.productPrice {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  color: #8B8B8B;
+  margin-top: 20px;
+  text-decoration: line-through;
+  text-decoration-color: #8B8B8B;
+
+
+}
+
+.productImage {
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 8px;
+
+  object-fit: cover;
+
+
+
+
+}
+
+.overlayDiscount {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background-color: green;
+  padding: 4px;
+  border-radius: 4px;
+  width: 52px;
+  height: 26px;
+  color: white;
+
+}

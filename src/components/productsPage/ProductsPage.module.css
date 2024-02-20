@@ -1,0 +1,34 @@
+.categoryTitle{
+font-family: Montserrat;
+font-size: 64px;
+font-weight: 700;
+text-align: left;
+
+padding: 40px;
+}
+
+.productsGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+    align-items: center;
+
+
+}
+
+
+.filterContainer {
+    display: flex;
+    padding: 40px;
+  }
+.btnFilter{
+    margin: 40px;
+}
+  .filterItem {
+    margin-right: 20px;
+  }
+  
+  .filterItem label {
+    margin-right: 5px;
+  }
+

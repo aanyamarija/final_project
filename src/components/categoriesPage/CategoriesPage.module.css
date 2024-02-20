@@ -1,0 +1,30 @@
+.btnsWrapper {
+    display: flex;
+    margin: 40px;
+}
+
+
+
+.styleBtn {
+    width: 142px;
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    color: black;
+    background-color: white;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.styleBtn:hover{
+    color: #DDDDDD;
+}
+
+
+.lineBtns {
+    width: 16px;
+    height: 0;
+    border: 1px solid #DDDDDD;
+    margin-top: 17px;
+}

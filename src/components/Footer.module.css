@@ -1,0 +1,148 @@
+/* Footer.module.css */
+
+.footer {
+    background-color: #fff;
+    margin: 40px;
+
+}
+
+.contactTitle {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 32px;
+}
+
+
+.socialIcons,
+.address,
+.workingHours {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f1f3f4;
+}
+.phone {
+    border-radius: 12px;
+    background-color: #f1f3f4;
+
+}
+
+.phone h2,
+.phone span,
+.socialIcons h2,
+.address h2,
+.address span,
+.workingHours h2,
+.workingHours p {
+    font-family: Montserrat;
+    text-align: left;
+    color: #8b8b8b;
+}
+
+.phone span,
+.address span,
+.workingHours p {
+    font-size: 20px;
+    color: black;
+    font-family: Montserrat;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+
+.phone h2,
+.socialIcons h2,
+.address h2,
+.workingHours h2 {
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.iconsIwa{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.mapWrapper {
+    grid-column: 1 / -1;
+     margin-top: 32px ;
+
+    margin-bottom: 0px;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.phoneWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+.icon img {
+    width: 30px;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+
+@media screen and (max-width: 768px) {
+    .footer {
+        margin: 16px;
+    }
+
+    .contactTitle {
+        font-size: 40px;
+        line-height: 46px;
+        margin: 24px;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .phone,
+    .socialIcons,
+    .address,
+    .workingHours {
+        padding: 16px;
+        margin-bottom: 24px;
+    }
+
+    .phone h2,
+    .socialIcons h2,
+    .address h2,
+    .workingHours h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .phone p,
+    .address p,
+    .workingHours p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .mapWrapper {
+        padding: 24px;
+    }
+}
