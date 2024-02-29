@@ -1,0 +1,23 @@
+.add_cart_btn {
+    width: 316px;
+    height: 58px;
+    padding: 16px, 32px;
+    border-radius: 6px;
+    gap: 10px;
+    cursor: pointer;
+    background-color:#339933 ;
+    border: none;
+    color: white;
+}
+
+.btn_active {
+    width: 316px;
+    height: 58px;
+    padding: 16px, 32px;
+    border-radius: 6px;
+    gap: 10px;
+    background-color: #339933;
+    border: none;
+    color: white;
+    cursor: default; /* чтобы не было возможности кликать, когда кнопка активна */
+}

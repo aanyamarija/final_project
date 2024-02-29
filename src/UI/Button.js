@@ -1,4 +1,5 @@
 import {useState } from "react"
+import "../UI/Button/buttonStyles.css"
 
 
 function Button({text, onClick ,...otherProps}){

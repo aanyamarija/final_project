@@ -1,6 +1,6 @@
 import React, { useEffect, useState , useMemo} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fecthAllProducts, fetchCategoryProducts } from "../../actions/products.js";
 import { filterByPriceAction, filterBySaleAction, sortProductsAction } from "../../reducers/productReducer.js";
 import { addItemAction } from "../../reducers/cartReducer.js";
@@ -100,11 +100,14 @@ function ProductsPage({ type }) {
       <button className={s.btnFilter} onClick={filterProducts}>Apply Filters</button>
       <div className={s.productsGrid}>
         {filteredProducts.map(product => (
+          <Link to={`/product/${product.id}`}>
           <ProductCard
             key={product.id} 
             product={product}
             onClick={(e) => AddToCartHandle(e, product)}
           />
+          </Link>
+       
         ))}
       </div>
     </div>

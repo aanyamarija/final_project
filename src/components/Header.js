@@ -15,13 +15,26 @@ function Header() {
             <span>Main page</span>
           </Link>
 
-           <span>Categories</span>
+          <Link to="/categories">
+          <span>Categories</span>
+          </Link>
+           
+           <Link to="/products/all"> 
            <span>All products</span>
+           </Link>
+           
+           <Link to="/products/sale">
            <span>All sales</span>
+           </Link>
+       
         </div>
+
+        <Link to="/cart">
         <div className='cart_icon'>
             <img className='cart_img' src={icon_cart}></img>
         </div>
+        </Link>
+       
     </header>
   )
 }

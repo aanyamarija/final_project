@@ -1,0 +1,110 @@
+.single_page_wrapper {
+    display: flex;
+    position: relative;
+    margin: 40px;
+    gap: 32px;
+}
+
+.info_wrapper {
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    
+}
+
+.btns_count {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn_count {
+    display: flex;
+    border: 1px solid #DDDDDD;
+}
+
+.btn_count button {
+    width: 58px;
+    height: 58px;
+    background-color: white;
+    border: none;
+    color: #DDDDDD;
+
+}
+
+.btn_count h2 {
+    width: 96px;
+    height: 58px;
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    font-weight: 300;
+    padding: 15px;
+
+    
+
+  
+}
+
+.title_product{
+    margin-bottom: 32px;
+}
+
+.title_product h2{
+    font-family: Montserrat;
+font-size: 40px;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: 0.03em;
+text-align: left;
+
+}
+
+.single_img {
+    border-radius: 3%;
+
+}
+
+.btn_add_to_cart {
+    width: 316px;
+    height: 58px;
+    padding: 16px 32px;
+    background-color: #339933;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.description_title {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.discount_price{
+    background-color: green;
+    padding: 4px;
+    border-radius: 4px;
+    width: 52px;
+    height: 26px;
+    color: white;
+}
+
+
+
+.text {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
