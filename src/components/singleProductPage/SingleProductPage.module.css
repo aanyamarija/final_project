@@ -6,17 +6,14 @@
 }
 
 .info_wrapper {
-
     display: flex;
     flex-direction: column;
     gap: 32px;
-    
 }
 
 .btns_count {
     display: flex;
     justify-content: space-between;
-
 }
 
 .btn_count {
@@ -40,29 +37,24 @@
     border: 1px solid #DDDDDD;
     font-weight: 300;
     padding: 15px;
-
-    
-
-  
 }
 
-.title_product{
+.title_product {
     margin-bottom: 32px;
 }
 
-.title_product h2{
+.title_product h2 {
     font-family: Montserrat;
-font-size: 40px;
-font-weight: 700;
-line-height: 44px;
-letter-spacing: 0.03em;
-text-align: left;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    text-align: left;
 
 }
 
 .single_img {
     border-radius: 3%;
-
 }
 
 .btn_add_to_cart {
@@ -70,7 +62,6 @@ text-align: left;
     height: 58px;
     padding: 16px 32px;
     background-color: #339933;
-
 }
 
 .description {
@@ -86,9 +77,9 @@ text-align: left;
     line-height: 26px;
     letter-spacing: 0em;
     text-align: left;
-
 }
-.discount_price{
+
+.discount_price {
     background-color: green;
     padding: 4px;
     border-radius: 4px;
@@ -97,8 +88,6 @@ text-align: left;
     color: white;
 }
 
-
-
 .text {
     font-family: Montserrat;
     font-size: 16px;
@@ -106,5 +95,4 @@ text-align: left;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-
 }

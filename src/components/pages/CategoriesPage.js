@@ -11,7 +11,7 @@ export default function CategoriesPage() {
         <button className={style.styleBtn}>Categories</button>
       </div>
 
-      <CategoriesContainer/>
+      <CategoriesContainer />
     </div>
   )
 }

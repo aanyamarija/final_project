@@ -1,4 +1,4 @@
-import React, { useEffect, useState , useMemo} from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fecthAllProducts, fetchCategoryProducts } from "../../actions/products.js";
@@ -7,8 +7,6 @@ import { addItemAction } from "../../reducers/cartReducer.js";
 import Button from "../../UI/Button.js";
 import s from "../productsPage/ProductsPage.module.css"
 import { ROOT_URL } from "../../index.js";
-
-// Импортируем компонент ProductCard
 import ProductCard from "../mainPage/ProductCard.js";
 
 function ProductsPage({ type }) {
@@ -16,22 +14,20 @@ function ProductsPage({ type }) {
   const dispatch = useDispatch();
   const { category_title, products } = useSelector(store => store.products);
 
-  // Исправленные переменные состояния и функции для фильтров
+
   const [priceFrom, setPriceFrom] = useState("");
   const [priceTo, setPriceTo] = useState("");
   const [discountedItems, setDiscountedItems] = useState(false);
   const [sortBy, setSortBy] = useState("default");
 
-  // Вычисляем filteredProducts из products и применяем к ним фильтры
+
   const filteredProducts = useMemo(() => {
-    // Применяем фильтры к продуктам
     let filtered = products.filter(product => {
-      // Логика фильтрации здесь
-      return true; // Пример: возвращаем true, если продукт соответствует фильтру
+      return true;
     });
 
     console.log(products);
-    // Применяем сортировку
+
     if (sortBy === "newest") {
       filtered = filtered.sort((a, b) => a.date - b.date);
     } else if (sortBy === "price_high_low") {
@@ -41,7 +37,7 @@ function ProductsPage({ type }) {
     }
 
     return filtered;
-  }, [products, sortBy]);
+  }, [products, sortBy, priceFrom, priceTo, discountedItems]);
 
   useEffect(() => {
     if (type !== 'category') {
@@ -52,10 +48,6 @@ function ProductsPage({ type }) {
   }, [dispatch, id, type]);
 
 
-  //.....
-  
-
-  
   function AddToCartHandle(e, obj) {
     e.preventDefault();
     dispatch(addItemAction({ ...obj, count: 1 }));
@@ -63,10 +55,8 @@ function ProductsPage({ type }) {
 
 
   const filterProducts = () => {
-    // Действия Redux для фильтрации по цене и скидке
     dispatch(filterByPriceAction({ from: priceFrom, to: priceTo }));
     dispatch(filterBySaleAction(discountedItems));
-    // Действие Redux для сортировки
     dispatch(sortProductsAction(sortBy));
   };
 
@@ -79,16 +69,17 @@ function ProductsPage({ type }) {
       )}
       <div className={s.filterContainer}>
         <div className={s.filterItem}>
-          <label>Price:</label>
+          <label>Price </label>
           <input type="text" placeholder="from" value={priceFrom} onChange={(e) => setPriceFrom(e.target.value)} />
+
           <input type="text" placeholder="to" value={priceTo} onChange={(e) => setPriceTo(e.target.value)} />
         </div>
         <div className={s.filterItem}>
-          <label>Discounted items:</label>
+          <label>Discounted items </label>
           <input type="checkbox" checked={discountedItems} onChange={(e) => setDiscountedItems(e.target.checked)} />
         </div>
         <div className={s.filterItem}>
-          <label>Sorted:</label>
+          <label>Sorted </label>
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
             <option value="default">By default</option>
             <option value="newest">Newest</option>
@@ -97,17 +88,17 @@ function ProductsPage({ type }) {
           </select>
         </div>
       </div>
-      <button className={s.btnFilter} onClick={filterProducts}>Apply Filters</button>
+
       <div className={s.productsGrid}>
         {filteredProducts.map(product => (
           <Link to={`/product/${product.id}`}>
-          <ProductCard
-            key={product.id} 
-            product={product}
-            onClick={(e) => AddToCartHandle(e, product)}
-          />
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={(e) => AddToCartHandle(e, product)}
+            />
           </Link>
-       
+
         ))}
       </div>
     </div>

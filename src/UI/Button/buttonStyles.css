@@ -19,5 +19,5 @@
     background-color: #339933;
     border: none;
     color: white;
-    cursor: default; /* чтобы не было возможности кликать, когда кнопка активна */
+    cursor: default;
 }

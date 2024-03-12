@@ -1,6 +1,162 @@
-
-
-.cart_wrapper{
+.cart_wrapper {
     display: flex;
     flex-direction: column;
+    margin: 40px;
+}
+
+.cart_item {
+    display: flex;
+    border: 1px solid #dddddd;
+    max-width: 100%;
+    ;
+
+
+}
+
+
+.item_info_wrapper {
+    display: flex;
+
+    margin-top: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    gap: 32px;
+    width: 780px;
+    height: 180px;
+    position: relative;
+
+
+
+}
+
+.item_info_wrapper img {
+
+    border-radius: 10px;
+}
+
+.close_card {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.info_wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title_wrapper {
+    display: flex;
+    gap: 90px;
+    margin-top: 32px;
+    justify-content: space-between;
+
+}
+
+
+.price_wrapper {
+    display: flex;
+    margin-top: 20px;
+    gap: 32px;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+
+.form_style {
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 30%;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.form_style form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    width: 600px;
+
+}
+
+.form_style input {
+    width: 100%;
+    height: 58px;
+    gap: 10px;
+    padding: 16px 32px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+
+.form_style input::placeholder {
+    color: gray;
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    padding-left: 10px;
+}
+
+.form_style button {
+    background-color: #0B710B;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 58px;
+    margin-top: 32px;
+    margin-right: 32px;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form_style button:hover {
+    background-color: lightgreen;
+}
+
+.form_style p {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: bold;
 }

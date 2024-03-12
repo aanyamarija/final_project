@@ -11,6 +11,8 @@ const FILTER_BY_SALE = 'FILTER_BY_SALE'
 const FILTER_BY_PRICE = 'FILTER_BY_PRICE'
 const SORT_PRODUCTS = 'SORT_PRODUCTS'
 
+const FILTER_ALL = 'FILTER_ALL';
+
 function addIsShowProp(array){
     return array.map(el => ({...el, isShow: true, isShowPrice: true}))
 }
@@ -57,7 +59,6 @@ export const productReducer = (state = defaultState, action) => {
                 products: show_products.map(el => {
                     const {from, to} = action.payload
                     const price = el.discont_price ?? el.price
-                    // if (!(price >= from && price <= to)){
                     if (price < from || price > to){
                         el.isShowPrice = false
                     }
@@ -65,6 +66,13 @@ export const productReducer = (state = defaultState, action) => {
                 })
             }
         case SORT_PRODUCTS: 
+        console.log(action.payload);
+        if(action.payload === 'default'){
+            return {
+                ...state,
+                products: state.products.sort((a,b) => a.id - b.id)
+            }
+        }else
             if (action.payload === 'price_asc'){
                 return {
                     ...state,
@@ -80,6 +88,22 @@ export const productReducer = (state = defaultState, action) => {
             } else {
                 return state
             }
+        case FILTER_ALL:
+            const filterByAll = 
+                 state.products.map(el => {
+                    const {priceFrom, priceTo, discountedItems} = action.payload;
+            
+                    const price = el.discont_price ?? el.price
+                    const elInPrice = (price > priceFrom && price < priceTo)  
+               
+                    const isDiscount = discountedItems ? el.discont_price === null ? false : true : true
+                    const elShow = elInPrice && isDiscount;
+                  
+                    return {...el, isShow: elShow}
+                })
+
+             
+                return {...state, products: filterByAll};
         default:
             return state
     }
@@ -93,5 +117,4 @@ export const filterBySaleAction = (payload) => ({type: FILTER_BY_SALE, payload})
 export const filterByPriceAction = (payload) => ({type: FILTER_BY_PRICE, payload})
 export const sortProductsAction = (payload) => ({type: SORT_PRODUCTS, payload})
 
-
-
+export const filterAllAction = (payload) => ({type: FILTER_ALL, payload})

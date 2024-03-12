@@ -30,6 +30,7 @@
     border-radius: 12px;
     background-color: #f1f3f4;
 }
+
 .phone {
     border-radius: 12px;
     background-color: #f1f3f4;
@@ -56,7 +57,7 @@
     font-family: Montserrat;
     font-weight: 600;
     text-decoration: none;
-    
+
 }
 
 .phone h2,
@@ -65,19 +66,18 @@
 .workingHours h2 {
     font-size: 18px;
     font-weight: 600;
-    
+
 }
 
-.iconsIwa{
+.iconsIwa {
     display: flex;
     gap: 20px;
-    
+
 }
 
 .mapWrapper {
     grid-column: 1 / -1;
-     margin-top: 32px ;
-
+    margin-top: 32px;
     margin-bottom: 0px;
 }
 
@@ -87,18 +87,17 @@
     border-radius: 10px;
 }
 
-.phoneWrapper{
+.phoneWrapper {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    
+
 }
 
 .icon img {
     width: 30px;
 }
 
-/* Медиа-запросы для адаптивного дизайна */
 
 @media screen and (max-width: 768px) {
     .footer {

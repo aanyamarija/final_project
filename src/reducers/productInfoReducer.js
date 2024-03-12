@@ -10,9 +10,8 @@ export const productInfoReducer = (state = defaultState, action) => {
         case GET_PRODUCT:
             return {...action.payload, count: 1}
         case CHANGE_COUNT_ITEM:
-            // if (state.count !== 1 || Math.sign(action.payload) !== -1){
-            //     return {...state, count: state.count + action.payload}
-            // }
+            
+        
             return {...state, count: state.count + action.payload}
         default:
             return state
@@ -21,4 +20,3 @@ export const productInfoReducer = (state = defaultState, action) => {
 
 export const getProductAction = (payload) => ({type: GET_PRODUCT, payload})
 export const changeCountItem = (payload) => ({type: CHANGE_COUNT_ITEM, payload})
-// export const replaceCountItem = (payload) => ({type: REPLACE_COUNT_ITEM, payload})

@@ -26,8 +26,8 @@ body {
 }
 
   .wrapper {
-    width: 100%; /* использовать 90% ширины экрана */
-    margin: 0; /* центрирование .wrapper */
+    width: 100%; 
+    margin: 0; 
     padding: 0;
   }
   
@@ -37,6 +37,11 @@ body {
   gap: 32px;
 
   
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 

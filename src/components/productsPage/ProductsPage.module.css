@@ -1,34 +1,65 @@
-.categoryTitle{
-font-family: Montserrat;
-font-size: 64px;
-font-weight: 700;
-text-align: left;
-
-padding: 40px;
+.categoryTitle {
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  text-align: left;
+  padding: 40px;
 }
 
-.productsGrid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    
-    align-items: center;
-
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
 
 }
-
 
 .filterContainer {
-    display: flex;
-    padding: 40px;
-  }
-.btnFilter{
-    margin: 40px;
+  display: flex;
+  padding: 40px;
 }
-  .filterItem {
-    margin-right: 20px;
-  }
-  
-  .filterItem label {
-    margin-right: 5px;
-  }
 
+.btnFilter {
+  margin: 40px;
+}
+
+.filterItem {
+  margin-right: 20px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.filterItem label {
+  margin-right: 5px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+input,
+select {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input::placeholder {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #8B8B8B;
+  padding-left: 10px;
+}
+
+select {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+
+}

@@ -1,12 +1,9 @@
-/* ProductCard.module.css */
+
 
 .productCardContainer {
-
   display: flex;
   justify-content: space-between;
   margin: 40px;
-
-
 
 }
 
@@ -16,12 +13,10 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-
   position: relative;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
-
   width: 316px;
   height: auto;
 
@@ -35,7 +30,6 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
-
   padding: 32px;
 }
 
@@ -46,8 +40,6 @@
   font-weight: 500;
   line-height: 26px;
   text-align: left;
-
-
 
 }
 
@@ -63,8 +55,6 @@
   font-size: 40px;
   font-weight: 600;
   color: black;
-
-
 }
 
 .productPrice {
@@ -76,21 +66,13 @@
   margin-top: 20px;
   text-decoration: line-through;
   text-decoration-color: #8B8B8B;
-
-
 }
 
 .productImage {
   width: 100%;
-
   height: auto;
-
   border-radius: 8px;
-
   object-fit: cover;
-
-
-
 
 }
 

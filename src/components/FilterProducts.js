@@ -4,13 +4,13 @@ import { useEffect, useRef } from "react"
 
 
 
-function FilterProducts({type, id}){
+function FilterProducts({ type, id }) {
     const checkboxRef = useRef()
     const formRef = useRef()
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (type !== 'sale'){
+        if (type !== 'sale') {
             checkboxRef.current.checked = false
         }
         formRef.current[0].value = ''
@@ -18,11 +18,11 @@ function FilterProducts({type, id}){
 
     }, [type, id])
 
-    function handleSaleBox(e){
+    function handleSaleBox(e) {
         dispatch(filterBySaleAction(e.target.checked))
     }
- 
-    function priceFormHandler(e){
+
+    function priceFormHandler(e) {
         let form_data = new FormData(e.target.parentElement)
         let data = Object.fromEntries(form_data)
         data.from = (data.from) ? +data.from : 0
@@ -30,22 +30,22 @@ function FilterProducts({type, id}){
         dispatch(filterByPriceAction(data))
     }
 
-    function selectHandler(e){
+    function selectHandler(e) {
         dispatch(sortProductsAction(e.target.value))
     }
 
 
-    return(
-        <div style={{margin: '10px'}}>
+    return (
+        <div style={{ margin: '10px' }}>
             <form ref={formRef} onKeyUp={priceFormHandler}>
-                <input type="number" name="from" placeholder="from"/>
-                <input type="number" name="to" placeholder="to"/>
+                <input type="number" name="from" placeholder="from" />
+                <input type="number" name="to" placeholder="to" />
             </form>
 
-           {type !== 'sale' &&
+            {type !== 'sale' &&
                 <label>
                     Sales products
-                    <input ref={checkboxRef} onClick={handleSaleBox} type="checkbox"/>
+                    <input ref={checkboxRef} onClick={handleSaleBox} type="checkbox" />
                 </label>
             }
             <select onChange={selectHandler}>

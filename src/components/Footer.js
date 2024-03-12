@@ -8,12 +8,12 @@ export default function Footer() {
   const icons = [
     {
       id: 1,
-      icon: <img src={insta} alt="Instagram"  />,
+      icon: <img src={insta} alt="Instagram" />,
       link: "https://www.instagram.com/",
     },
     {
       id: 2,
-      icon: <img src={watsapp} alt="WhatsApp"  />,
+      icon: <img src={watsapp} alt="WhatsApp" />,
       link: "https://wa.me/1234567890",
     },
   ];

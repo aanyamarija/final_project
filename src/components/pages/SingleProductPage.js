@@ -14,7 +14,6 @@ function SingleProductPage() {
 
   const dispatch = useDispatch()
   const product = useSelector(store => store.productInfo)
-  /*const {items} = useSelector(store => store.cart)*/
   const { id } = useParams()
 
   console.log(product)
@@ -24,53 +23,52 @@ function SingleProductPage() {
   }, [dispatch])
 
   const discountPercent = Math.round(((1 - product.discont_price / product.price) * 100));
-
+  const currentPrice = product.discont_price ?? product.price
   return (
     <div className={s.single_page_wrapper}>
       <div className={s.single_productImage}>
-      <img className={s.single_img}  width={500} height={500} src={ROOT_URL + product.image} />
+        <img className={s.single_img} width={500} height={500} src={ROOT_URL + product.image} />
       </div>
-    
+
       <div className={s.info_wrapper}>
-      
-        
-          <div className={s.price}>
+
+
+        <div className={s.price}>
           <div className={s.title_product}>
-          <h2>{product.title}</h2>
+            <h2>{product.title}</h2>
           </div>
-         
-            <div className={styles.priceContainer}>
-              <p className={styles.productDiscountPrice}> ${product.discont_price}</p>
-              <p className={styles.productPrice}>${product.price}</p>
+
+          <div className={styles.priceContainer}>
+            <p className={styles.productDiscountPrice}>${currentPrice}</p>
+            {product.discont_price && (
               <div className={s.discount_price}>
-              <p>-{discountPercent}%</p>
+                <p>-{discountPercent}%</p>
               </div>
-            
-            
-            </div>
-           
-
+            )}
           </div>
 
-          <div className={s.btns_count}>
-            <div className={s.btn_count}>
-            <button onClick={() => dispatch(changeCountItem(-1))}>-</button>
-            <h2>{product.count}</h2>
-            <button onClick={() => dispatch(changeCountItem(1))}>+</button>
-            </div>
-        
-            <Button onClick={() => dispatch(addItemAction(product))} text='Add to cart' />
-          </div>
-     
-
-          <div className={s.description}>
-            <p className={s.description_title}>Description </p>
-            <p className={s.text}>{product.description}</p>
-          </div>
 
         </div>
 
-    
+        <div className={s.btns_count}>
+          <div className={s.btn_count}>
+            <button onClick={() => dispatch(changeCountItem(-1))}>-</button>
+            <h2>{product.count}</h2>
+            <button onClick={() => dispatch(changeCountItem(1))}>+</button>
+          </div>
+
+          <Button onClick={() => dispatch(addItemAction(product))} text='Add to cart' />
+        </div>
+
+
+        <div className={s.description}>
+          <p className={s.description_title}>Description </p>
+          <p className={s.text}>{product.description}</p>
+        </div>
+
+      </div>
+
+
 
     </div>
   )

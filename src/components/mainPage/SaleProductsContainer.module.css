@@ -23,7 +23,7 @@
   letter-spacing: 0em;
   text-align: left;
 
-  margin: 40px;
+  margin: 30px;
 }
 
 .lineSales {
@@ -44,41 +44,40 @@
   gap: 10px;
 }
 
-.salesWrapper{
-width: 100%;
+.salesWrapper {
+  width: 100%;
 }
 
-/* SaleProductsContainer.module.css */
 
 .salesWrapper {
   width: 100%;
 }
 
-/* Медиа-запрос для маленьких устройств (телефоны и планшеты) */
+
 @media (max-width: 768px) {
   .titleBtnWrapper {
-    flex-direction: column; /* Заголовок и кнопка в столбец */
-    align-items: center; /* Центрирование заголовка и кнопки по горизонтали */
+    flex-direction: column;
+    align-items: center;
   }
 
   .lineBtnWrapper {
-    flex-direction: column; /* Линия и кнопка в столбец */
-    align-items: center; /* Центрирование линии и кнопки по горизонтали */
+    flex-direction: column;
+    align-items: center;
+
   }
 
   .lineSales {
-    width: 90%; /* Ширина линии */
-    max-width: 832px; /* Максимальная ширина линии */
-    border: 1px solid #DDDDDD; /* Граница линии */
-    margin: 20px auto; /* Отступы от краев */
+    width: 90%;
+    max-width: 832px;
+    border: 1px solid #DDDDDD;
+    margin: 20px auto;
+
   }
 
   .SaleProductsWrapper {
     display: flex;
-    flex-direction: column; /* Карточки товаров в столбец */
-    align-items: center; /* Центрирование карточек по горизонтали */
+    flex-direction: column;
+    align-items: center;
+
   }
 }
-
-
-  

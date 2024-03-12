@@ -25,15 +25,15 @@ function SaleProductsContainer() {
   return (
     <div className={style.salesWrapper}>
       <div className={style.titleBtnWrapper}>
-      <div className={style.SalesTitleBtn}>
-        <h2>Sale</h2>
+        <div className={style.SalesTitleBtn}>
+          <h2 className={style.SalesTitleBtn}>Sale</h2>
+        </div>
+        <div className={style.lineBtnWrapper}>
+          <div className={style.lineSales}></div>
+          <button className={style.SaleBtn}>All sales</button>
+        </div>
       </div>
-      <div className={style.lineBtnWrapper}>
-        <div className={style.lineSales}></div>
-        <button className={style.SaleBtn}>All sales</button>
-      </div>
-      </div> 
-    
+
       <div className={style.SaleProductsWrapper}>
         {filteredSaleProducts.map(product => (
           <ProductCard key={product.id} product={product} />
